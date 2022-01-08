@@ -21,7 +21,7 @@
         "wp-cli/eval-command": "^2",
         "wp-cli/export-command": "^2",
         "wp-cli/extension-command": "^2.1",
-        "wp-cli/i18n-command": "^2",
+        "wp-cli/i18n-command": "dev-dotorg",
         "wp-cli/import-command": "^2",
         "wp-cli/language-command": "^2",
         "wp-cli/maintenance-mode-command": "^2",
@@ -41,6 +41,12 @@
         "roave/security-advisories": "dev-latest",
         "wp-cli/wp-cli-tests": "^3.0.7"
     },
+    "repositories": [
+        {
+            "type": "vcs",
+            "url": "git@github.com:ocean90/i18n-command.git"
+        }
+    ],
     "suggest": {
         "psy/psysh": "Enhanced `wp shell` functionality"
     },

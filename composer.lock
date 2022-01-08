@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "31c62fb16542b305c6416977580f30c0",
+    "content-hash": "27bc9ab10e3f8b3186175a74d2c004c7",
     "packages": [
         {
             "name": "composer/ca-bundle",
@@ -2599,26 +2599,26 @@
         },
         {
             "name": "wp-cli/i18n-command",
-            "version": "v2.2.11",
+            "version": "dev-dotorg",
             "source": {
                 "type": "git",
-                "url": "https://github.com/wp-cli/i18n-command.git",
-                "reference": "2688b3626440d952eeb10b43a483e151d8faf51b"
+                "url": "https://github.com/ocean90/i18n-command.git",
+                "reference": "35c860f07fb23274de2c8f537ebf57aa659afaa9"
             },
             "dist": {
                 "type": "zip",
-                "url": "https://api.github.com/repos/wp-cli/i18n-command/zipball/2688b3626440d952eeb10b43a483e151d8faf51b",
-                "reference": "2688b3626440d952eeb10b43a483e151d8faf51b",
+                "url": "https://api.github.com/repos/ocean90/i18n-command/zipball/35c860f07fb23274de2c8f537ebf57aa659afaa9",
+                "reference": "35c860f07fb23274de2c8f537ebf57aa659afaa9",
                 "shasum": ""
             },
             "require": {
                 "gettext/gettext": "^4.8",
-                "mck89/peast": "^1.13.9",
+                "mck89/peast": "^1.13",
                 "wp-cli/wp-cli": "^2.5"
             },
             "require-dev": {
                 "wp-cli/scaffold-command": "^1.2 || ^2",
-                "wp-cli/wp-cli-tests": "^3.1"
+                "wp-cli/wp-cli-tests": "^3.0.11"
             },
             "suggest": {
                 "ext-mbstring": "Used for calculating include/exclude matches in code extraction"
@@ -2643,7 +2643,32 @@
                     "i18n-command.php"
                 ]
             },
-            "notification-url": "https://packagist.org/downloads/",
+            "scripts": {
+                "behat": [
+                    "run-behat-tests"
+                ],
+                "behat-rerun": [
+                    "rerun-behat-tests"
+                ],
+                "lint": [
+                    "run-linter-tests"
+                ],
+                "phpcs": [
+                    "run-phpcs-tests"
+                ],
+                "phpunit": [
+                    "run-php-unit-tests"
+                ],
+                "prepare-tests": [
+                    "install-package-tests"
+                ],
+                "test": [
+                    "@lint",
+                    "@phpcs",
+                    "@phpunit",
+                    "@behat"
+                ]
+            },
             "license": [
                 "MIT"
             ],
@@ -2657,9 +2682,9 @@
             "homepage": "https://github.com/wp-cli/i18n-command",
             "support": {
                 "issues": "https://github.com/wp-cli/i18n-command/issues",
-                "source": "https://github.com/wp-cli/i18n-command/tree/v2.2.11"
+                "source": "https://github.com/ocean90/i18n-command/tree/dotorg"
             },
-            "time": "2022-01-06T00:01:01+00:00"
+            "time": "2021-07-19T16:42:02+00:00"
         },
         {
             "name": "wp-cli/import-command",
@@ -6689,6 +6714,7 @@
     "aliases": [],
     "minimum-stability": "dev",
     "stability-flags": {
+        "wp-cli/i18n-command": 20,
         "wp-cli/wp-cli": 20,
         "roave/security-advisories": 20
     },
